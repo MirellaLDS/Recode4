@@ -1,0 +1,10 @@
+com/example/listcandiesproject/Candy.java
+ com.example.listcandiesproject.Candy
+com/example/listcandiesproject/List1Activity.java
+ com.example.listcandiesproject.List1Activity
+com/example/listcandiesproject/BuildConfig.java
+ com.example.listcandiesproject.BuildConfig
+com/example/listcandiesproject/List2Activity.java
+ com.example.listcandiesproject.List2Activity
+com/example/listcandiesproject/CandyAdapter.java
+ com.example.listcandiesproject.CandyAdapter
