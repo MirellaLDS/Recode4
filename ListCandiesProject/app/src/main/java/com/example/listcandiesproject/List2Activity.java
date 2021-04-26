@@ -18,6 +18,13 @@ public class List2Activity extends AppCompatActivity {
 
         List<Candy> supplierNames = Arrays.asList(
                 new Candy(R.drawable.donut_circle, getString(R.string.candy_description)),
+                new Candy(R.drawable.donut_circle, getString(R.string.candy_description)),
+                new Candy(R.drawable.icecream_circle, getString(R.string.candy_description)),
+                new Candy(R.drawable.froyo_circle, getString(R.string.candy_description)),
+                new Candy(R.drawable.froyo_circle, getString(R.string.candy_description)),
+                new Candy(R.drawable.donut_circle, getString(R.string.candy_description)),
+                new Candy(R.drawable.froyo_circle, getString(R.string.candy_description)),
+                new Candy(R.drawable.donut_circle, getString(R.string.candy_description)),
                 new Candy(R.drawable.froyo_circle, getString(R.string.candy_description)),
                 new Candy(R.drawable.icecream_circle, getString(R.string.candy_description)));
 

@@ -29,6 +29,11 @@ public class ListagemAdapter extends ArrayAdapter {
         this.layout = resource;
     }
 
+    @Override
+    public int getCount() {
+        return lista.size();
+    }
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

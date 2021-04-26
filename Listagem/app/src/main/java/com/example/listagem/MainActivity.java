@@ -27,26 +27,11 @@ public class MainActivity extends AppCompatActivity {
         nomeDosAlunos.add("Gabriel");
         nomeDosAlunos.add("Tadeu");
 
+        ProfessorAdapter professorAdapter = new ProfessorAdapter(MainActivity.this, R.layout.activity_dois, nomeDosAlunos);
 
-        ListView viewDeLista = findViewById(R.id.lvListagem);
+        ListView viewDeLista = findViewById(R.id.lvLista);
 
-        // Gerenciador Padrão
-        ArrayAdapter gerenciadorAdapter = new ArrayAdapter(this, R.layout.item_da_lista, nomeDosAlunos);
-
-        // Gerenciador Custom
-        ListagemAdapter listagemAdapter = new ListagemAdapter(this, R.layout.item_da_lista, nomeDosAlunos);
-
-        viewDeLista.setAdapter(listagemAdapter);
-
-
-//        viewDeLista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//                Toast.makeText(MainActivity.this, "Mensagem de Click", Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
+        viewDeLista.setAdapter(professorAdapter);
 
     }
 }
