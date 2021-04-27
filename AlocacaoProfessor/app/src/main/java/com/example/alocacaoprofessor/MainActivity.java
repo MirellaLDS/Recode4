@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView = findViewById(R.id.nomeCurso);
-
+        ListView listView = findViewById(R.id.lvListView);
 
         RetrofitConfiguration configuration = new RetrofitConfiguration();
 
@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
                 List<Curso> cursoList = response.body();
 
-                textView.setText(cursoList.get(5).getName());
+                CursoAdapter adapter = new CursoAdapter(MainActivity.this, R.layout.item_list, cursoList);
+                listView.setAdapter(adapter);
+
 
                 if (cursoList != null) {
                     for (Curso curso : cursoList) {
