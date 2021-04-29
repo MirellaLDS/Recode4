@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.alocacaoprofessor.model.Curso;
+import com.example.alocacaoprofessor.repository.RetrofitConfiguration;
+import com.example.alocacaoprofessor.view.CursoAdapter;
 
 import java.util.List;
 

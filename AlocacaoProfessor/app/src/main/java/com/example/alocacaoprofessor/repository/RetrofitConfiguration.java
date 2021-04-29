@@ -1,4 +1,7 @@
-package com.example.alocacaoprofessor;
+package com.example.alocacaoprofessor.repository;
+
+import com.example.alocacaoprofessor.service.CursoService;
+import com.example.alocacaoprofessor.service.DepartamentoService;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
@@ -17,4 +20,9 @@ public class RetrofitConfiguration {
     public CursoService getCursosService() {
         return retrofit.create(CursoService.class);
     }
+
+    public DepartamentoService getDepartamentoService() {
+        return retrofit.create(DepartamentoService.class);
+    }
+
 }

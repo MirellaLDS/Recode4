@@ -20,8 +20,18 @@
         android:id="@+id/buttonDepartamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="abrirTelaDepartamento"
         android:text="Tela Departamento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonCurso"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btDepartamentDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhe do Departamento"
+        android:onClick="abrirTelaDepartamentoDetalhes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDepartamento" />
 </androidx.constraintlayout.widget.ConstraintLayout>

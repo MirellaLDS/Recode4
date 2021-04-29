@@ -1,4 +1,4 @@
-package com.example.alocacaoprofessor;
+package com.example.alocacaoprofessor.view;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.example.alocacaoprofessor.R;
+import com.example.alocacaoprofessor.model.Curso;
 
 import java.util.List;
 
@@ -39,7 +42,7 @@ public class CursoAdapter extends ArrayAdapter {
         Curso curso = objects.get(position);
 
         ImageView imageView = view.findViewById(R.id.ivImagem);
-        TextView tvNomeCurso = view.findViewById(R.id.tvCurso);
+        TextView tvNomeCurso = view.findViewById(R.id.tvItemTitle);
         TextView tvProfessorAlocado = view.findViewById(R.id.tvProfessor);
 
         imageView.setImageResource(R.drawable.conta_privada);

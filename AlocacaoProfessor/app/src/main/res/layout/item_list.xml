@@ -19,13 +19,13 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tvCurso"
+            android:id="@+id/tvItemTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            tools:text="Nome do curso" />
+            tools:text="Titulo do item" />
 
         <TextView
             android:id="@+id/tvProfessor"

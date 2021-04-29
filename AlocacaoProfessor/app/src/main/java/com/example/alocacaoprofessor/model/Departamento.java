@@ -1,16 +1,19 @@
-package com.example.alocacaoprofessor;
+package com.example.alocacaoprofessor.model;
 
-public class Curso {
+import java.util.List;
+
+public class Departamento {
 
     private int id;
     private String name;
+    private List<Professor> professors;
 
-    public Curso(int id, String name) {
+    public Departamento(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Curso() {
+    public Departamento() {
     }
 
     public int getId() {

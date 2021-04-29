@@ -1,4 +1,6 @@
-package com.example.alocacaoprofessor;
+package com.example.alocacaoprofessor.service;
+
+import com.example.alocacaoprofessor.model.Curso;
 
 import java.util.List;
 
