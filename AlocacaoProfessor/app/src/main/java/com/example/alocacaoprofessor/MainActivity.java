@@ -7,6 +7,7 @@ import android.util.Log;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.alocacaoprofessor.dao.RoomConfiguration;
 import com.example.alocacaoprofessor.model.Curso;
 import com.example.alocacaoprofessor.repository.RetrofitConfiguration;
 import com.example.alocacaoprofessor.view.CursoAdapter;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
         RetrofitConfiguration configuration = new RetrofitConfiguration();
 
+        RoomConfiguration roomConfiguration = RoomConfiguration.getInstance(this);
+
         Call<List<Curso>> call = configuration.getCursosService().getCursos();
 
         call.enqueue(new Callback<List<Curso>>() {
@@ -36,15 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
                 List<Curso> cursoList = response.body();
 
+                roomConfiguration.cursoDAO().insertAll(cursoList);
+
+
                 CursoAdapter adapter = new CursoAdapter(MainActivity.this, R.layout.item_list, cursoList);
                 listView.setAdapter(adapter);
 
-
-                if (cursoList != null) {
-                    for (Curso curso : cursoList) {
-                        Log.i(MainActivity.class.getSimpleName(), curso.getName());
-                    }
-                }
             }
 
             @Override

@@ -1,6 +1,7 @@
 package com.example.alocacaoprofessor.service;
 
 import com.example.alocacaoprofessor.model.Departamento;
+import com.example.alocacaoprofessor.model.DepartamentoDTO;
 
 import java.util.List;
 
@@ -14,6 +15,6 @@ public interface DepartamentoService {
     Call<List<Departamento>> getTodosOsDepartamentos();
 
     @GET("departament/{id}")
-    Call<Departamento> getDepartamentoByID(@Path("id") int idDepartamento);
+    Call<DepartamentoDTO> getDepartamentoByID(@Path("id") int idDepartamento);
 
 }

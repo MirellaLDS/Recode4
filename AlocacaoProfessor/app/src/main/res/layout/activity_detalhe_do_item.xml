@@ -52,4 +52,12 @@
         android:onClick="pegarDepatamentoNoServidor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llProfessorsName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvItemName">
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
